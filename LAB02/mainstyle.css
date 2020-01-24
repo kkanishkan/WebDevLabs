@@ -1,0 +1,30 @@
+@import "heading.css";
+@import "paragraph.css";
+
+* { font-family: "Arial" }
+
+.link {
+	font-family: "Times New Roman";
+	font-style: italic;
+}
+
+#name, #number {
+	color:black;
+	font-style: oblique;
+}
+
+table {
+	border: 5px solid blue;
+	padding:10px;
+	padding-bottom: 15px;
+}
+
+th,td {
+	padding:15px;
+	text-align: center;
+}
+
+img {
+	box-shadow: 5px 5px 0 0 black;
+	opacity: 0.5;
+}

@@ -1,0 +1,11 @@
+body {
+    background-image: url("../img/mainBG.jpg");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+p {
+    color: rgb(255, 251, 22);
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}

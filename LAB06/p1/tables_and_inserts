@@ -1,0 +1,12 @@
+CREATE TABLE photos (
+    photo_id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    subject VARCHAR(50) NOT NULL,
+    location VARCHAR(25) NOT NULL,
+    date_taken DATE NOT NULL,
+    url VARCHAR(50) NOT NULL
+);
+
+INSERT INTO photos (subject, location, date_taken, url) VALUES ("Toronto City Sign", "Toronto", STR_TO_DATE('07/01/18', '%m/%d/%Y'), "https://tinyurl.com/yf4byug8");
+INSERT INTO photos (subject, location, date_taken, url) VALUES ("Montreal City Sign", "Montreal", STR_TO_DATE('05/05/15', '%m/%d/%Y'), "https://tinyurl.com/yj4d74zk");
+INSERT INTO photos (subject, location, date_taken, url) VALUES ("Vancouver City Sign", "Vancouver", STR_TO_DATE('03/09/10', '%m/%d/%Y'), "https://tinyurl.com/yhoerzsl");
+INSERT INTO photos (subject, location, date_taken, url) VALUES ("PEI City Sign", "Prince Edward Island", STR_TO_DATE('01/08/19', '%m/%d/%Y'), "https://tinyurl.com/yzs3daa3");

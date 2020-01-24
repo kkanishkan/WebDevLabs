@@ -1,0 +1,30 @@
+.labTitle {
+    font-size: 17px;
+}
+
+.mainContent {
+    background:url("../img/ice-background.jpg") no-repeat;
+    background-position: center;
+    height: 1000px;
+    padding: 140px 100px;
+    color: #000;
+}
+
+.mainContent h1{
+    font-size: 40px;
+    font-weight:  700;
+    text-transform: uppercase;
+}
+
+.mainContent p {
+    margin: auto;
+    border-width: 3px;
+    border-color: #000;
+    font-weight:  bold;
+
+}
+
+.mainContent img {
+    height:88px;
+    width:62px;
+}

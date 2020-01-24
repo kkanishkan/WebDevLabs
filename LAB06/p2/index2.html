@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        function formValidation() {
+            var x = document.forms["information"]["name"].value;
+            nameReg = /^[A-Za-z]+$/;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            } 
+            
+            if(x.match(nameReg)) {
+            
+            } else {
+                alert("Name must be filled out correctly!");
+                return false;
+            }
+            
+            var y = document.forms["information"]["phone"].value;
+            regExp = /^[0-9]{3}-{1}[0-9]{3}-[0-9]{4}$/;
+            
+            if(y == "") {
+                alert("Enter a valid phone number XXX-XXX-XXXX!");
+                return false;
+            }
+            if(y.match(regExp)){
+
+                } else {
+                    alert("Enter a valid phone number XXX-XXX-XXXX!");
+                    return false;
+                }
+            
+            var z = document.forms["information"]["address"].value;
+            if(z == "") {
+                alert("Enter an address!");
+                return false;
+            }
+        }
+    </script>
+    <head>
+        <title>CPS 530 - Lab 6 - Part 1 - Ruby </title>
+
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h4>Enter your information below: </h4>
+        <div class="form">
+            <form name="information" action="../../cgi-bin/python.py"  onsubmit="return formValidation()" method="POST">
+                Name: <input type="text" name="name"> <br/>
+                Address: <input type="text" name="address"> <br/>
+                Phone: <input type="text" name="phone"> <br/>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

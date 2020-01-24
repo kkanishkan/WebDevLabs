@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CPS 530 - LAB 8 - Kanishkan Kukarajah</title>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <script type="text/javascript" src="xml2json.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', ()=>{
+                let url = "http://199.195.194.92:2199/rpc/meyima03/streaminfo.get?x=1";
+                fetch(url)
+                .then(response=>response.text())
+                .then(data=>{
+                    let parser = new DOMParser();
+                    let xml = parser.parseFromString(data, "application/xml");
+                    var x2js = new X2JS();
+                    var jsonObj = x2js.xml2json(xml); // Convert XML to JSON
+                    findSongInfo(jsonObj);
+                })
+            })
+
+            function findSongInfo(json) {
+                console.log(JSON.stringify(json));
+                let songName = json.response.data.item.song;
+                let artistName = json.response.data.item.track.artist;
+                let albumArt = json.response.data.item.track.imageurl;
+
+                document.getElementById("song").innerHTML = songName;
+                document.getElementById("artist").innerHTML = artistName;
+                document.getElementById("album").innerHTML = '<img src="'+ albumArt +'">';
+            }
+
+            //Refresh the body every 5 minutes
+            function autoLoad() {
+                setTimeout("window.open(self.location, '_self');", 300000);
+            }
+        </script>
+    </head>
+    <body onload="autoLoad()">
+        <h1>CPS 530 - LAB 8 - Kanishkan Kukarajah</h1>
+        <h3>JSON Version</h3>
+        <p id="song"></p>
+        <p id="artist"></p>
+        <div id="album"></div>
+    </body>
+</html>

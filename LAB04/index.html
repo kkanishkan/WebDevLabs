@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CPS 530 - Lab 4 - kkukaraj</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>CPS 530 - Lab 4 - Kanishkan Kukarajah 500723832</h1>
+        <h2>PART 1:</h2>
+        <div class="container">
+            <a href="../cgi-bin/HomePage.cgi">Go to part 1!</a>
+        </div>
+        <h2>PART 2:</h2>
+        <h3>Please enter your information: </h3>
+        <Form action="../cgi-bin/form.cgi" method="GET">
+            First Name: <input type="text" name="first_name"> <br>
+            Last Name: <input type="text" name="last_name"> <br>
+            <p>Gender</p>
+            Male: <input type="radio" name="male" value="male"><br>
+            Female: <input type="radio" name="female" value="female"><br>
+            Other: <input type="radio" name="other" value="other"><br>
+            <p>Are you ready for lab 5?</p>
+            <select name="readiness" size="5" multiple="multiple">
+                <option value="ready">Ready?</option>
+                <option value="not_ready">Not Ready?</option>
+            </select> <br>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </Form>
+    </body>
+</html>

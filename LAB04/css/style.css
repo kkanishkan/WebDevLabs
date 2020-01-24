@@ -1,0 +1,48 @@
+body {
+    background-color: powderblue;
+  }
+
+  .container {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h1 {
+    color: red;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h2 {
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h3 {
+    color: blue;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  Form {
+    color: black;
+    align-content: center;
+    text-align: center;
+  }
+
+  select {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16;
+      text-align: center;
+  }
+
+  input {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16;
+      text-align: center;
+  }
